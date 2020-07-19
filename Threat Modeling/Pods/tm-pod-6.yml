@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: capability-test
+spec:
+  containers:
+  - name: demo
+    image: example.io/simple:1.0
+    securityContext:
+      capabilities:
+        add: ["NET_ADMIN", "CHOWN"]

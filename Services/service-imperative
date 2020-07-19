@@ -1,0 +1,4 @@
+kubectl expose deployment web-deploy \
+--name=hello-svc \
+--target-port=8080 \
+--type=NodePort

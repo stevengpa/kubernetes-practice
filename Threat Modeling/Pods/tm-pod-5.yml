@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo
+spec:
+  securityContext: # Applies to all containers in this Pod
+    runAsUser: 1000 # Non-root user
+  containers:
+  - name: demo
+    image: example.io/simple:1.0
+    securityContext:
+      runAsUser: 2000 # Overrides the Pod setting

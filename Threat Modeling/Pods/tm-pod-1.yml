@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: service-account-example-pod
+spec:
+  serviceAccountname: some-service-account
+  automountServiceAccountToken: false # Disable ServiceAccount identity of the Pod

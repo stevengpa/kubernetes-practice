@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: readonly-test
+spec:
+  securityContext:
+    readOnlyRootFilesystem: true
+    allowedHostPaths:
+      - pathPrefix: "/test"
+        readOnly: true
